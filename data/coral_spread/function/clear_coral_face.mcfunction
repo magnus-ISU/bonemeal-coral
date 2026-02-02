@@ -2,6 +2,10 @@
 # This allows repeated bonemealing without vanilla spawns blocking the face
 # For tall seagrass, clear the top block first to prevent particles
 fill ~0 ~2 ~0 ~0 ~1 ~0 minecraft:water replace minecraft:tall_seagrass strict
+fill ~1 ~0 ~0 ~1 ~0 ~0 minecraft:water replace minecraft:tall_seagrass
+fill ~-1 ~0 ~0 ~-1 ~0 ~0 minecraft:water replace minecraft:tall_seagrass
+fill ~0 ~0 ~1 ~0 ~0 ~1 minecraft:water replace minecraft:tall_seagrass
+fill ~0 ~0 ~-1 ~0 ~0 ~-1 minecraft:water replace minecraft:tall_seagrass
 
 # Now clear the main faces
 fill ~1 ~0 ~0 ~1 ~0 ~0 minecraft:water replace #coral_spread:coral_replaceable strict
