@@ -1,6 +1,3 @@
-# Debug: found coral block
-tellraw @a [{"text":"[Coral Spread] ","color":"aqua"},{"text":"Found coral block! Spreading coral in 3x3x3 cube...","color":"green"}]
-
 # Detect which type of coral block this is and store it
 # 0=tube, 1=brain, 2=bubble, 3=fire, 4=horn
 execute if block ~ ~ ~ minecraft:tube_coral_block run scoreboard players set #coral_type coral_spread 0
@@ -43,4 +40,5 @@ execute positioned ~-1 ~1 ~1 run function coral_spread:try_place
 execute positioned ~0 ~1 ~1 run function coral_spread:try_place
 execute positioned ~1 ~1 ~1 run function coral_spread:try_place
 
-tellraw @a [{"text":"[Coral Spread] ","color":"aqua"},{"text":"Spread complete!","color":"green"}]
+# Clear any seagrass/coral fans from adjacent faces so coral can be bonemealed again
+function coral_spread:clear_coral_face

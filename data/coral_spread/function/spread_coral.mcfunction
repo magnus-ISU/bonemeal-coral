@@ -1,6 +1,3 @@
-# Debug: advancement triggered
-tellraw @s [{"text":"[Coral Spread] ","color":"aqua"},{"text":"Advancement triggered! Player bonemealed coral in warm ocean.","color":"yellow"}]
-
 # Revoke advancement so it can trigger again
 advancement revoke @s only coral_spread:bonemeal_coral
 
