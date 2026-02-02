@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "bonemeal_coral": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:tube_coral_block",
+                  "minecraft:brain_coral_block",
+                  "minecraft:bubble_coral_block",
+                  "minecraft:fire_coral_block",
+                  "minecraft:horn_coral_block"
+                ]
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "minecraft:bone_meal"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:bone_meal"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "coral_spread:spread_coral"
+  }
+}
